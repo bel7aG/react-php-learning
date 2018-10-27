@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => (
   <div className="header">
-    <a href="./php.php" target="_blank">PHP file</a>
+    <NavLink to="/">Home</NavLink> 
   </div>
 );
 
