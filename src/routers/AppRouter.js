@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Header, Home, PracticalWorkFile, NotFound } from './components';
+import { Header, Home, Main, PracticalWorkFile, NotFound } from '../components';
 
 export default class AppRouter extends Component {
-  <React.Fragment>
-    <Header />
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" component={Home} exact />
-        <Route path="/practicle-work" component={PracticalWorkFile} exact />
-        <Route component={NotFound} />
-      </Switch>
-    </BrowserRouter>
-  </React.Fragment>
+  render() {
+    return (
+      <BrowserRouter>
+        <React.Fragment>
+          <Header />
+          <Main>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/practicle-work" component={PracticalWorkFile} />
+              <Route component={NotFound} />
+            </Switch>
+          </Main>
+        </React.Fragment>
+      </BrowserRouter>
+    );
+  }
 }
