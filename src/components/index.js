@@ -1,5 +1,5 @@
 import App from './App'
 import Router from './Router'
-import Context from './Context'
+import Navigation from './Navigation'
 
-export { App, Router, Context }
+export { App, Router, Navigation }
